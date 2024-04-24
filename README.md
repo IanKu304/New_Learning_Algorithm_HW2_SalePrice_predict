@@ -1,7 +1,7 @@
 # conclusion
 #### 整體而言可能是因為只有一層，從肉眼看預測結果就能發現有點underfitig，許多預測結果和實際值相差甚遠，並且迭帶夠多的話最後所有y都會收斂到價格平均大約180000上下，可能需要加入強化式學習
 #### 資料來源:
-house-prices-advanced-regression-techniques
+[house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 ## preprocessing:
 #### 做了mice imputing 和robust scaling 沒做normalization
 ## hidden nodes:
