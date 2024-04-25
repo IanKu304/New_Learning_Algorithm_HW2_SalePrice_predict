@@ -1,7 +1,7 @@
 ## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 ## 資料簡介:
-### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
+### X 為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
 ##### Missing Rate
 |              |total  missing | missing percentage | handling |
 |--------------|---------|----------|------------|
@@ -16,13 +16,14 @@
 | GarageType   | 81      | 5.55%    | Use IterativeImputer | 
 |             |      |  :    |  |
 |             |      |  :    |  |
-### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
+### y 為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
+### 因為kaggle 競賽的df_test沒有y，所以將df_train 以8:2 分成 train set和validation set。
 
 
 
 
-## conclusion
-#### 這次一開始調了一堆參數增加了好幾層但最後結果都不太理想，後來發現一個問題是我Xavier函數沒寫好，幾乎等於沒做，補好之後發現生出來的數字可以調整scale。另一點模型表現增加最多的地方是對y做了scale，用robust scaler 調整並用來訓練，訓練完後再把test 預測出來的結果用inverse_transform轉換回去，
+## Conclusion
+#### 這次一開始調了一堆參數增加了好幾層但最後結果都不太理想，後來發現一個問題是我Xavier函數沒寫好，幾乎等於沒做，補好之後發現生出來的數字可以調整scale。另一點模型表現增加最多的地方是對y做了scale，用robust scaler 調整並用來訓練，訓練完後再把test 預測出來的結果用inverse_transform轉換回去。
 
 ## hidden nodes:
 #### 從2 layer 11個nodes改成 6 layer 214*150*100*50*20*11*1
