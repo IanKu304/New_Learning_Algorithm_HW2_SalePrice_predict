@@ -1,11 +1,30 @@
-# conclusion
-#### 整體而言可能是因為只有一層，從肉眼看預測結果就能發現有點underfitig，許多預測結果和實際值相差甚遠，並且迭帶夠多的話最後所有y都會收斂到價格平均大約180000上下，可能需要加入強化式學習
-#### 資料來源:
+## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
-## preprocessing:
-#### 做了mice imputing 和robust scaling 沒做normalization
+## 介紹:
+#### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
+##### Missing Rate
+              total missing missing percentage
+PoolQC                 1453             99.52%    drop
+MiscFeature            1406             96.30%    drop
+Alley                  1369             93.77%    drop
+Fence                  1179             80.75%    drop
+FireplaceQu             690             47.26% |
+LotFrontage             259             17.74% |
+GarageYrBlt              81              5.55% |  use IterativeImputer impute
+GarageCond               81              5.55% |
+GarageType               81              5.55% |
+                          :
+                          :
+#### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
+
+
+
+
+## conclusion
+#### 這次一開始調了一堆參數增加了好幾層但最後結果都不太理想，後來發現一個問題是我Xavier函數沒寫好，幾乎等於沒做，補好之後發現生出來的數字可以調整scale。另一點模型表現增加最多的地方是對y做了scale，用robust scaler 調整並用來訓練，訓練完後再把test 預測出來的結果用inverse_transform轉換回去，
+
 ## hidden nodes:
-#### 不管5、8或11 訓練出來的結果差不多，可能是前面proeprocessing 的時候 dummy 產生過多categorical variables
+#### 從2 layer 11個nodes改成 6 layer 214*150*100*50*20*11*1
 ## initial weight:
 #### 做了 Xavier，但有做沒做最後都會收斂到差不多的點
 ## Activation:
