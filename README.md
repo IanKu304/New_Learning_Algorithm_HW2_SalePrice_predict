@@ -1,7 +1,7 @@
 ## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
-## 介紹:
-#### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
+## 資料簡介:
+### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
 ##### Missing Rate
               total missing missing percentage
 PoolQC                 1453             99.52%    drop
@@ -15,7 +15,7 @@ GarageCond               81              5.55% |
 GarageType               81              5.55% |
                           :
                           :
-#### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
+### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
 
 
 
