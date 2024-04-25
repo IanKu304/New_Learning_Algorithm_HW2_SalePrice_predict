@@ -4,17 +4,17 @@
 ### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
 ##### Missing Rate
 #####              total missing missing percentage
-##### PoolQC                 1453             99.52%    drop
-##### MiscFeature            1406             96.30%    drop
-##### Alley                  1369             93.77%    drop
-##### Fence                  1179             80.75%    drop
-##### FireplaceQu             690             47.26% |
-##### LotFrontage             259             17.74% |
-##### GarageYrBlt              81              5.55% |  use IterativeImputer impute
-##### GarageCond               81              5.55% |
-##### GarageType               81              5.55% |
-#####                          :
-#####                          :
+<h5> PoolQC                 1453             99.52%    drop</h5>
+<h5> MiscFeature            1406             96.30%    drop</h5>
+<h5> Alley                  1369             93.77%    drop</h5>
+<h5> Fence                  1179             80.75%    drop</h5>
+<h5> FireplaceQu             690             47.26% |</h5>
+<h5> LotFrontage             259             17.74% |</h5>
+<h5> GarageYrBlt              81              5.55% |  use IterativeImputer impute</h5>
+<h5> GarageCond               81              5.55% |</h5>
+<h5> GarageType               81              5.55% |</h5>
+<h5>                          :                      </h5>
+<h5>                          :                      </h5>
 ### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
 
 
