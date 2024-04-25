@@ -14,9 +14,8 @@
 | GarageYrBlt  | 81      | 5.55%    | Use IterativeImputer |
 | GarageCond   | 81      | 5.55%    | Use IterativeImputer |
 | GarageType   | 81      | 5.55%    | Use IterativeImputer | 
-
-                          :                      
-                          :                      
+|       :       |      |    | |
+|       :       |       |     |  |
 ### y為1460*1的房價，介於34900至755000之間，平均為180921.196，標準差為 79442.502883，稍微有點右偏，不符合常態假設。
 
 
