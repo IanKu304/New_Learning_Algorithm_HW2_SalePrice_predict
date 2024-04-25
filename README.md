@@ -3,7 +3,7 @@
 ## 資料簡介:
 ### X為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
 ##### Missing Rate
- | | total |missing| missing| percentage| |
+  | total |missing| missing| percentage| |
  |PoolQC|1453  |99.52%   | drop
  |MiscFeature  |1406            | 96.30%   | drop
  |Alley   | 1369     | 93.77%   | drop
